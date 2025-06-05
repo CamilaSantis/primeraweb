@@ -1,84 +1,167 @@
-:root {
-    --fondo: #fdf6f0;
-    --verde-salvia: #a8b6a1;
-    --rosado-seco: #e8b4b8;
-    --terracota: #d8a48f;
-    --cafe-lino: #c3b091;
-    --texto-oscuro: #4b3f2f;
-    --sombra: rgba(0, 0, 0, 0.05);
-  }
-  
-  body {
-    background-color: var(--fondo);
-    color: var(--texto-oscuro);
-    font-family: 'Georgia', serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: var(--rosado-seco);
-    padding: 1rem;
+/* Estilo general */
+body {
+    font-family: 'Libre Baskerville', serif;
+    background-color: #F5E6CC; /* Beige cálido */
+    color: #8D6E63; /* Marrón suave */
+    margin: 20px;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 800px;
+    margin: auto;
     text-align: center;
-    border-bottom: 4px double var(--terracota);
-  }
-  
-  header h1 {
-    margin: 0;
-    font-size: 2.5rem;
-    color: var(--texto-oscuro);
-  }
-  
-  nav {
-    background-color: var(--verde-salvia);
-    padding: 0.5rem;
-    text-align: center;
-  }
-  
-  nav a {
-    color: var(--fondo);
-    margin: 0 10px;
+}
+
+/* Encabezados */
+h1 {
+    font-family: 'Parisienne', cursive;
+    color: #A7C7A3; /* Verde salvia */
+    font-size: 36px;
+}
+
+h2 {
+    font-family: 'Libre Baskerville', serif;
+    color: #C3A6D1; /* Lavanda tenue */
+}
+
+/* Estilo de las recetas */
+.recipe {
+    background-color: #460101;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+}
+
+/* Enlaces */
+a {
+    color: #A7C7A3;
     text-decoration: none;
     font-weight: bold;
-  }
-  
-  section {
-    padding: 2rem;
-    margin: 1rem auto;
-    max-width: 700px;
-    background-color: #ffffff;
-    border: 1px solid var(--cafe-lino);
-    box-shadow: 0 4px 8px var(--sombra);
-    border-radius: 12px;
-  }
-  
-  section h2 {
-    color: var(--terracota);
-    font-family: 'Georgia', serif;
-  }
-  
-  button {
-    background-color: var(--verde-salvia);
-    color: white;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button:hover {
-    background-color: var(--rosado-seco);
-  }
-  
-  footer {
-    text-align: center;
-    padding: 1rem;
-    font-size: 0.9rem;
-    color: var(--texto-oscuro);
-  }
+}
 
+/* Fotos*/
+.card img {
+  max-width: 20%;
+  border-radius: auto;
+}
 
-  
+a:hover {
+    text-decoration: underline;
+    color: #E6B8B7; /* Rosa empolvado */
+}
+
+body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f0f5f6;
+      color: #333;
+    }
+    header {
+      background: url('banner.jpg') no-repeat center;
+      background-size: cover;
+      padding: 20px;
+      color: #ab5c02;
+      text-align: center;
+    }
+    nav {
+      background-color: #d8cfc2;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+    nav a {
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .search {
+      text-align: center;
+      margin: 20px;
+    }
+    .search input {
+      padding: 8px;
+      width: 250px;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background-color: #c7e6f7;
+      border-radius: 8px;
+      padding: 15px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+    }
+    .card img {
+      max-width: 100%;
+      border-radius: 5px;
+    }
+    .card h3 {
+      margin-top: 10px;
+    }
+    .card p {
+      font-size: 14px;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      background: #fff;
+      padding: 5px 10px;
+      text-decoration: none;
+      color: #333;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+
+    .contacto {
+  background-color: #f2ede8;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contacto h2 {
+  margin-bottom: 20px;
+}
+
+.contacto form {
+  max-width: 600px;
+  margin: auto;
+  text-align: left;
+}
+
+.contacto label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.contacto input,
+.contacto textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.contacto button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #c7e6f7;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contacto button:hover {
+  background-color: #a3d7ee;
+}
