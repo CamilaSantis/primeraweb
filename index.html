@@ -4,220 +4,101 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Recetas de CamiKim</title>
-  <link rel="stylesheet" href="Stylo.css" />
+  <link rel="stylesheet" href="Style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
   <header>
-    <h1>Recetario de CamiKim</h1>
-    <p>Recetas fáciles para aprendices</p>
+    <h1>Las Delicias de CamiKim</h1>
   </header>
 
-  <nav>
-    <a href="#">Recetas</a>
-    <a href="#">Contacto</a>
-  </nav>
 
-  <div class="search">
-    <input type="text" placeholder="Busca una receta..." />
-  </div>
+ <div class="search">
+  <input type="text" id="buscador" placeholder="Busca una receta..." />
+</div>
+
 
   <main class="container">
-    <div class="card">
-      <img src="imagenes/ciabatta.jpeg" alt="Pan Ciabatta con Poolish" />
-      <h3>Pan Ciabatta con Poolish</h3>
-      <p>Descubre esta receta de pan sin amasar </p>
-      <details>
-        <summary>Ver más</summary>
-        <p><strong>Para 2 panes medianos</strong></p>
-        <ul>
-          <li>Para el Poolish</li>
-          <li>250 gr harina de trigo</li>
-          <li>3 gr levadura fresca</li>
-          <li>250 ml de agua a temperatura ambiente</li>
-          <li>Para la masa final</li>
-          <li>Toda la masa previa</li>
-          <li>250 gr de harina de fuerza</li>
-          <li>7 g de sal</li>
-          <li>3 gr de levadura fresca</li>
-          <li>50 ml de agua adicional</li>
-          <li>15 ml de aceite de oliva</li>
-        </ul>
-        <p> Día anterior: preparar la masa previa
-            Mezcla los 250 g de harina, los 250 ml de agua y 3 g de levadura fresca.
-            Revuelve hasta integrar (no hace falta amasar).
-            Tapa con film y deja fermentar a temperatura ambiente entre 12 y 18 horas.
-            Día siguiente: hacer la masa
-            En un bol grande, mezcla la masa previa con los 250 g de harina, 7 g de sal, 3 g de levadura fresca disuelta en el agua restante, y el aceite de oliva.
-            Mezcla bien con cuchara o batidora con gancho. La masa será muy pegajosa y húmeda, eso es normal en la ciabatta.
-            No añadas más harina. Si usas batidora, amasa 8-10 minutos; a mano, mezcla y haz pliegues suaves cada 30 minutos (ver punto siguiente).
-            Fermentación en bloque y pliegues
-            Coloca la masa en un recipiente aceitado y cúbrelo.
-            Cada 30 minutos durante 2 horas, haz un pliegue: levanta un borde de la masa, dóblalo hacia el centro, y gira el bol. Hazlo por los 4 lados.
-            Deja que fermente hasta que duplique su tamaño (2-3 h en total, según temperatura).</p>
-      </details>
-    </div>
 
-    <div class="card">
-      <img src="imagenes/ingredienteskombuchafeijoa.jpeg" alt="Kombucha de Feijoa" />
-      <h3>Kombucha de Feijoa</h3>
-      <p>Receta para kombucha saborizada con feijoa</p>
-      <details>
-        <summary>Ver más</summary>
-        <ul>
-          <li>1 litro de kombucha base (ya fermentada, sin sabor, lista para embotellar)</li>
-          <li>2–3 feijoas maduras (dependiendo del tamaño)</li>
-          <li>1–2 cucharaditas de azúcar (opcional, para estimular la carbonatación)</li>
-          <li>Botellas de vidrio con tapa hermética (tipo Grolsch o similar)</li>
-        </ul>
-        <p>Paso 1: Prepara la fruta
-Lava bien las feijoas. Córtalas por la mitad y retira la pulpa con una cuchara (la cáscara puede dar un sabor amargo). Tritura ligeramente la pulpa con un tenedor para liberar más aroma (no hagas puré total, solo romper un poco).
-Paso 2: Embotella
-En cada botella limpia y seca, añade: 1–2 cucharadas de pulpa de feijoa (Opcional) ½ cucharadita de azúcar por botella (estimula carbonatación) (Opcional) trozo pequeño de jengibre o gota de jugo de limón Llena con la kombucha base, dejando 2-3 cm de espacio en la parte superior. Cierra bien la tapa.
-Paso 3: Segunda fermentación (carbonatación)
-Deja las botellas a temperatura ambiente (20–25 °C) durante 2 a 4 días. Cada día, "eructa" las botellas: abre con cuidado para liberar presión y evitar explosiones. ⏱️ Tiempo según el clima: Si hace calor, 2 días bastan. Si hace frío, quizás necesites 4-5 días.
-Paso 4: Filtra y refrigera
-Cuando esté bien carbonatada, cuela el contenido (opcional, si no quieres trozos de fruta) y guarda en el refrigerador. Consume fría. Dura varias semanas refrigerada.</p>
-      </details>
+ 
+  <section id="categorias">
+    <h2>Categorías</h2>
+    <div class="botones-categorias">
+      <button onclick="mostrarProductos('fermentos')">Fermentos Líquidos</button>
+      <button onclick="mostrarProductos('pan')">Pan</button>
+      <button onclick="mostrarProductos('dulces')">Masas Dulces</button>
+      <button onclick="mostrarProductos('galletas')">Galletas</button>
     </div>
+  </section>
 
-    <div class="card">
-      <img src="imagenes/galletasmanichipschoco.jpeg" alt="galletasmanichipschoco" />
-      <h3>Galletas de Mantequilla de Mani con Chips de Chocolate</h3>
-      <p>Crujientes por fuera y suaves por dentro</p>
-      <details>
-        <summary>Ver más</summary>
-        <ul>
-          <li>119 gr Mantequilla</li>
-          <li>34 gr azúcar blanca</li>
-          <li>66 gr azúcar morena</li>
-          <li>54 gr huevos</li>
-          <li>59 gr mantequilla de mani</li>
-          <li>196 gr harina todo uso</li>
-          <li>44 gr glucosa</li>
-          <li>2 gr sal</li>
-          <li>1,8 gr bicarbonato</li>
-          <li>179 gr chips de chocolate </li>
-        </ul>
-        <p>Dejar la mantequilla a temperatura ambiente por 15 a 30
-Cremar la mantequilla en conjunto con ambos azúcares, la mantequilla de mani y 
-la glucosa por aproximadamente 4 minutos en velocidad media de batidora de pedestal(velocidad 4 en Kitchenaid),
-utilizando el accesorio de Lira. Agregar los huevos y seguir cremando hasta obtener una mezcla homogénea.
-Bajar la velocidad al minimo y agregar todos los secos
-previamente tamizados, una vez que se forme una masa
-homogénea, agregar los chips de chocolate.
-Utilizando guantes, elaborar esferas de 60g y disponer sobre una bandeja cubierta con una lámina plástica o mat de silicona; congelar por un minimo de 3 horas antes de hornear.
-Traspasar las esferas de masa a una bandeja de horno cubierta con papel mantequilla (preferentemente), o bien,con un mat de silicona liso; dejar un espacio mínimo de 5cm a la redonda, entre cada galleta.
-Precalentar el horno a 180°C.
-Hornear las galletas congeladas a 180°C durante 9
-minutos.
-Al salir del horno, aplastar levemente las galletas decorarlas con chips de chocolate y mani tostado en la parte superior, mientras aún permanecen calientes.</p>
-      </details>
+  <section id="carrusel-productos" class="carrusel">
+    <button id="prev-btn" aria-label="Anterior"></button>
+    <div class="carrusel-imagen">
+      <img src="" alt="Producto destacado" id="imagen-carrusel" />
+      <p id="nombre-carrusel"></p>
     </div>
+      <button id="next-btn" aria-label="Siguiente"></button>
+  </section>
 
-    <div class="card">
-      <img src="imagenes/pandepapa.jpeg" alt="pandepapa" />
-      <h3>Pan de Papa</h3>
-      <p>Ingrediente principal para tus hamburguesas caseras</p>
-      <details>
-        <summary>Ver más</summary>
-        <ul>
-          <li>100 g tomates secos hidratados</li>
-          <li>50 g almendras tostadas</li>
-          <li>1 diente de ajo</li>
-          <li>Aceite de oliva, sal y pimienta</li>
-        </ul>
-        <p>Preparar la biga (noche anterior):
-          Mezcla la harina, agua y levadura. Amasa brevemente hasta que esté todo incorporado. Tapa y deja fermentar 12-16 horas a temperatura ambiente (debe crecer y oler ligeramente ácido).
-          Masa principal:
-          En un bol grande (o batidora con gancho), mezcla la biga troceada, la harina, azúcar, sal, levadura, ralladura y vainilla.
-          Agrega los huevos uno a uno (y la yema extra) mientras amasas. La masa será pegajosa al principio, pero se unirá.
-          Amasa unos 10-15 min hasta que esté elástica y comience a despegarse del bol.
-          Incorpora la mantequilla poco a poco, amasando bien entre cada adición (otros 10-15 min). La masa debe quedar brillante y elástica.
-          Primer levado:
-          Tapa y deja fermentar a temperatura ambiente hasta que doble (2-3 h), o en el refrigerador toda la noche para mayor sabor.
-          Formado:
-          Desgasifica suavemente, forma bollos o trenza, y coloca en molde engrasado.
-          Segundo levado:
-          Deja levar hasta que casi duplique (1.5-2 h).
-          Horneado:
-          Pinta con huevo batido.
-          Hornea a 180°C por 30-35 minutos (según tamaño), hasta que esté dorado y al golpear suene hueco.
-          Enfriado:
-          Enfría sobre rejilla antes de cortar.</p>
-      </details>
-    </div>
+  <section id="productos">
+    <h2>Productos sugeridos</h2>
+    <div id="contenedor-productos"></div>
+  </section>
 
-    <div class="card">
-      <img src="imagenes/panquequeesponjoso.jpeg" alt="panquequeesponjoso" />
-      <h3>Panqueques esponjosos</h3>
-      <p>Otra forma de disfrutar los clásicos panqueques</p>
-      <details>
-        <summary>Ver más</summary>
-        <ul>
-          <li>2 huevos</li>
-          <li>2 cucharadas de azúcar</li>
-          <li>2 cucharadas de aceite</li>
-          <li>1 taza de leche</li>
-          <li>2 tazas de harina todo uso</li>
-          <li>1 cucharada de polvos de hornear</li>
-          <li>1 cucharadita de esencia de vainilla</li>
-          <li>Manjar</li>
-        </ul>
-        <p>Mezcla todos los ingredientes en una licuadora hasta lograr una mezcla semiespesa. Deja reposar en el refrigerador por 15 minutos
-          Luego en una sartén de teflón pon aceite y vierte pequeñas cantidades formando circulos de 5 cm aprox y cocina dos minutos por lado o hasta que doren levemente
-        </p>
-      </details>
-    </div>
-  
+    <!-- Formulario de Registro -->
+    <section class="registro">
+      <h2>Regístrate para recibir nuevas recetas</h2>
+      <form id="registroForm">
+        <input type="text" id="nombreReg" placeholder="Nombre Completo" required>
+        <input type="email" id="correoReg" placeholder="Correo Electrónico" required>
 
-  <div class="card">
-      <img src="imagenes/Quequezapallo.jpeg" alt="Quequezapallo" />
-      <h3>Queque de Zapallo</h3>
-      <p>Un ingrediente poco común que te sorprenderá </p>
-      <details>
-        <summary>Ver más</summary>
-        <ul>
-          <li>400 g de puré de zapallo cocido </li>
-          <li>250 g de harina todo uso</li>
-          <li>200 g de azúcar (puedes usar mitad blanca y mitad rubia si prefieres)</li>
-          <li>125 g de mantequilla derretida</li>
-          <li>3 huevos</li>
-          <li>2 cucharaditas colmadas (10 g) de polvo de hornear</li>
-          <li>1 cucharadita de canela en polvo</li>
-          <li>1/2 cucharadita de nuez moscada (opcional)</li>
-          <li>1/4 cucharadita de sal</li>
-          <li>1 cucharadita de esencia de vainilla</li>
-          <li>1/2 cucharadita de jugo de limón o vinagre blanco (para equilibrar la acidez)</li>
-          <li>70 g de nueces picadas o pasas (opcional)</li>
-        </ul>
-        <p>1. Precalienta el horno a 180°C y engrasa un molde para queque.
-          2. En un bowl grande, mezcla la harina, el polvo de hornear, la sal, la canela y la nuez moscada.
-          3. En otro bowl, bate la mantequilla derretida con el azúcar. Agrega los huevos uno a uno.
-          4. Incorpora el puré de calabaza, la vainilla y el jugo de limón o vinagre.
-          5. Agrega los ingredientes secos a la mezcla húmeda y revuelve con movimientos envolventes. Añade las nueces o pasas si las usas.
-          6. Vierte la mezcla en el molde y hornea durante 50–60 minutos, o hasta que al insertar un palillo en el centro, salga seco.
-          7. Deja enfriar 15 minutos antes de desmoldar.</p>
-      </details>
-    </div>
+        <input type="text" id="telefono" placeholder="+56 9 1234 5678" required>
+        <span class="validacion" id="telefonoHint">Formato: +56 9 XXXX XXXX</span>
 
+        <input type="number" id="edad" placeholder="Edad" required>
+
+        <input type="password" id="contrasena" placeholder="Contraseña segura" required>
+        <span class="validacion" id="contrasenaHint">Mínimo 8 caracteres, 1 mayúscula, 1 minúscula y 1 número</span>
+
+        <label for="region">Región:</label>
+        <select id="region"><option value="">Seleccione Región</option></select>
+
+        <label for="comuna">Comuna:</label>
+        <select id="comuna"><option value="">Seleccione Comuna</option></select>
+
+        <button type="submit">Registrarse</button>
+      </form>
+    </section>
+
+    <!-- Formulario de contacto -->
     <section class="contacto">
-  <h2>Si tienes dudas escríbeme</h2>
-  <form action="#" method="post">
-    <label for="nombre">Nombre:</label>
-    <input type="text" id="nombre" name="nombre" required>
+      <h2>¿Tienes dudas? Escríbeme</h2>
+      <form action="#" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
 
-    <label for="email">Correo electrónico:</label>
-    <input type="email" id="email" name="email" required>
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
 
-    <label for="mensaje">Mensaje:</label>
-    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
 
-    <button type="submit">Enviar</button>
-  </form>
-</section>
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
 
   </main>
+    <div id="carrito" class="carrito">
+      <h3>🛒 Carrito de Compras</h3>
+      <ul id="lista-carrito"></ul>
+      <p id="total-carrito">Total: 0 productos</p>
+      <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+    </div>
+    
 
+  <script src="script.js"></script>
 </body>
 </html>
+
